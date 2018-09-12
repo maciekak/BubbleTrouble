@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubbleTrouble", "BubbleTrou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "GameEngine\GameEngine.csproj", "{05692620-337A-46CC-A9E2-2EF2B4E41799}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine.Tests", "GameEngine.Tests\GameEngine.Tests.csproj", "{C5322B19-8AEF-45C9-B452-2701ADD94938}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{05692620-337A-46CC-A9E2-2EF2B4E41799}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05692620-337A-46CC-A9E2-2EF2B4E41799}.Release|x64.ActiveCfg = Release|Any CPU
 		{05692620-337A-46CC-A9E2-2EF2B4E41799}.Release|x64.Build.0 = Release|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Debug|x64.Build.0 = Debug|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Release|x64.ActiveCfg = Release|Any CPU
+		{C5322B19-8AEF-45C9-B452-2701ADD94938}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
