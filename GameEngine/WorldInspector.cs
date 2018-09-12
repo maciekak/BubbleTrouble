@@ -1,6 +1,6 @@
 ﻿using GameEngine.Interfaces;
 
-namespace BubbleTrouble
+namespace GameEngine
 {
     public class WorldInspector : IWorldInspector
     {
