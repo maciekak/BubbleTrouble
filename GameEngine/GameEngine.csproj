@@ -81,6 +81,10 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Enums\CollisionCheckingEnd.cs" />
     <Compile Include="Enums\CollisionRegisterType.cs" />
+    <Compile Include="Enums\RegisterSide.cs" />
+    <Compile Include="Exceptions\GameObjectAlreadyExistsInRegisterException.cs" />
+    <Compile Include="Exceptions\KeyAlreadyExistsInRegisterException.cs" />
+    <Compile Include="Exceptions\KeyNotFoundInRegisterException.cs" />
     <Compile Include="Interfaces\ICanCollide.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Interfaces\IGravityInteraction.cs" />

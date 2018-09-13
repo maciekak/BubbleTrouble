@@ -13,24 +13,24 @@ namespace GameEngine.Tests
             public Vector2i Size { get; set; }
             public void WasCollision(IGameObject gameObject)
             {
-                
             }
         }
 
         [TestMethod]
-        public void CheckForCollision_Should_BeTrue_Test()
+        [DataRow(2, 2, 3, 3, 1, 3, 5, 1)]
+        public void CheckForCollision_ShouldBeTrue_Test(int fpx, int fpy, int fsx, int fsy, int spx, int spy, int ssx, int ssy)
         {
             //Arrange
             var first = new GameObject
             {
-                Position = new Vector2i(2, 2),
-                Size = new Vector2i(3, 3)
+                Position = new Vector2i(fpx, fpy),
+                Size = new Vector2i(fsx, fsy)
             };
 
             var second = new GameObject
             {
-                Position = new Vector2i(1, 3),
-                Size = new Vector2i(5, 1)
+                Position = new Vector2i(spx, spy),
+                Size = new Vector2i(ssx, ssy)
             };
 
             //Act

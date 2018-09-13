@@ -5,21 +5,21 @@ using GameEngine.Interfaces;
 
 namespace GameEngine
 {
-    public class CollisionRegister
+    internal class CollisionRegister
     {
-        private readonly Tuple<IEnumerable<IGameObject>, IEnumerable<IGameObject>> _registredItems;
+        public Tuple<IList<IGameObject>, IList<IGameObject>> RegistredItems { get; }
         private readonly CollisionRegisterType _collisionRegisterType;
         private readonly CollisionCheckingEnd _collisionCheckingEnd;
 
         public CollisionRegister(
-            IEnumerable<IGameObject> first, 
-            IEnumerable<IGameObject> second,
+            IList<IGameObject> first,
+            IList<IGameObject> second,
             CollisionRegisterType collisionRegisterType, 
             CollisionCheckingEnd collisionCheckingEnd)
         {
             _collisionRegisterType = collisionRegisterType;
             _collisionCheckingEnd = collisionCheckingEnd;
-            _registredItems = new Tuple<IEnumerable<IGameObject>, IEnumerable<IGameObject>>(first, second);
+            RegistredItems = new Tuple<IList<IGameObject>, IList<IGameObject>>(first, second);
         }
 
         public bool CheckForCollision()
@@ -28,13 +28,13 @@ namespace GameEngine
             IEnumerable<IGameObject> right;
             if (_collisionRegisterType == CollisionRegisterType.RightSide)
             {
-                left = _registredItems.Item2;
-                right = _registredItems.Item1;
+                left = RegistredItems.Item2;
+                right = RegistredItems.Item1;
             }
             else
             {
-                left = _registredItems.Item1;
-                right = _registredItems.Item2;
+                left = RegistredItems.Item1;
+                right = RegistredItems.Item2;
             }
 
             var wasAnyCollision = false;
