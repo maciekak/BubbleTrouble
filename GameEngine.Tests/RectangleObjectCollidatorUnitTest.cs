@@ -7,7 +7,7 @@ namespace GameEngine.Tests
     [TestClass]
     public class RectangleObjectCollidatorUnitTest
     {
-        private class GameObject : IGameObject
+        private class GameObject : ICanCollide
         {
             public Vector2i Position
             { get; set; }

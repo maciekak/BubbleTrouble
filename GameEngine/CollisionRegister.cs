@@ -7,25 +7,25 @@ namespace GameEngine
 {
     internal class CollisionRegister
     {
-        public Tuple<IList<IGameObject>, IList<IGameObject>> RegistredItems { get; }
+        public Tuple<IList<ICanCollide>, IList<ICanCollide>> RegistredItems { get; }
         private readonly CollisionRegisterType _collisionRegisterType;
         private readonly CollisionCheckingEnd _collisionCheckingEnd;
 
         public CollisionRegister(
-            IList<IGameObject> first,
-            IList<IGameObject> second,
+            IList<ICanCollide> first,
+            IList<ICanCollide> second,
             CollisionRegisterType collisionRegisterType, 
             CollisionCheckingEnd collisionCheckingEnd)
         {
             _collisionRegisterType = collisionRegisterType;
             _collisionCheckingEnd = collisionCheckingEnd;
-            RegistredItems = new Tuple<IList<IGameObject>, IList<IGameObject>>(first, second);
+            RegistredItems = new Tuple<IList<ICanCollide>, IList<ICanCollide>>(first, second);
         }
 
         public bool CheckForCollision()
         {
-            IEnumerable<IGameObject> left;
-            IEnumerable<IGameObject> right;
+            IEnumerable<ICanCollide> left;
+            IEnumerable<ICanCollide> right;
             if (_collisionRegisterType == CollisionRegisterType.RightSide)
             {
                 left = RegistredItems.Item2;

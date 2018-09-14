@@ -53,7 +53,7 @@ namespace GameEngine
             return false;
         }
 
-        public void AddToRegister(string key, IGameObject gameObject, RegisterSide side)
+        public void AddToRegister(string key, ICanCollide gameObject, RegisterSide side)
         {
             CheckObjectForNull(gameObject);
 
@@ -75,8 +75,8 @@ namespace GameEngine
         }
 
         public void AddRegister(string key, 
-            IList<IGameObject> left, 
-            IList<IGameObject> right, 
+            IList<ICanCollide> left, 
+            IList<ICanCollide> right, 
             CollisionRegisterType registerType,
             CollisionCheckingEnd checkingEnd)
         {
@@ -89,7 +89,7 @@ namespace GameEngine
             _collisionRegisters.Add(key, register);
         }
 
-        public void RemoveObjectFromAllRegisters(IGameObject gameObject)
+        public void RemoveObjectFromAllRegisters(ICanCollide gameObject)
         {
             CheckObjectForNull(gameObject);
 
@@ -108,7 +108,7 @@ namespace GameEngine
             _collisionRegisters.Remove(key);
         }
 
-        public void RemoveObjectFromAllRegisterBySide(IGameObject gameObject, RegisterSide side)
+        public void RemoveObjectFromAllRegisterBySide(ICanCollide gameObject, RegisterSide side)
         {
             CheckObjectForNull(gameObject);
 
@@ -125,7 +125,7 @@ namespace GameEngine
             }
         }
 
-        public void RemoveObjectFromRegisterBySide(string key, IGameObject gameObject, RegisterSide side)
+        public void RemoveObjectFromRegisterBySide(string key, ICanCollide gameObject, RegisterSide side)
         {
             CheckObjectForNull(gameObject);
 

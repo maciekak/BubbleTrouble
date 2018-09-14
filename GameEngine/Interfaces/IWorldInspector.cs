@@ -6,18 +6,18 @@ namespace GameEngine.Interfaces
     public interface IWorldInspector
     {
         void Inspect();
-        void AddToRegister(string key, IGameObject gameObject, RegisterSide side);
+        void AddToRegister(string key, ICanCollide gameObject, RegisterSide side);
         void AddRegister(string key, 
-            IList<IGameObject> left, 
-            IList<IGameObject> right,
+            IList<ICanCollide> left, 
+            IList<ICanCollide> right,
             CollisionRegisterType registerType, 
             CollisionCheckingEnd checkingEnd);
 
         void AddObjectToUpdate(IGameObject gameObject);
         bool AddObjectWithKeyToUpdate(string key, IGameObject gameObject);
-        void RemoveObjectFromAllRegisters(IGameObject gameObject);
+        void RemoveObjectFromAllRegisters(ICanCollide gameObject);
         void RemoveRegister(string key);
-        void RemoveObjectFromAllRegisterBySide(IGameObject gameObject, RegisterSide side);
-        void RemoveObjectFromRegisterBySide(string key, IGameObject gameObject, RegisterSide side);
+        void RemoveObjectFromAllRegisterBySide(ICanCollide gameObject, RegisterSide side);
+        void RemoveObjectFromRegisterBySide(string key, ICanCollide gameObject, RegisterSide side);
     }
 }
