@@ -83,7 +83,7 @@ namespace GameEngine
             if (_collisionRegisters.ContainsKey(key))
                 throw new KeyAlreadyExistsInRegisterException();
             if(left == null || right == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
 
             var register = new CollisionRegister(left, right, registerType, checkingEnd);
             _collisionRegisters.Add(key, register);
@@ -147,7 +147,7 @@ namespace GameEngine
         private void CheckObjectForNull(IGameObject gameObject)
         {
             if (gameObject == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
         }
     }
 }
